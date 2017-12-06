@@ -8,4 +8,7 @@ public class Assassin extends Protagonist{
 		attack *= 2;
 	}
 
+	public String toString(){
+        return "Assassin: " + name + " hp=" + health + " strength=" + strength + " def=" + defense + " atk=" + attack + System.lineSeparator();
+    }
 }

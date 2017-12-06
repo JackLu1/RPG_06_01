@@ -5,4 +5,8 @@ public class Orc extends Monster{
 		defense *= 0.9;
 		attack *= 0.9;
 	}
+
+	public String toString(){
+        return "Orc: " + " hp=" + health + " strength=" + strength + " def=" + defense + " atk=" + attack + System.lineSeparator();
+    }
 }
