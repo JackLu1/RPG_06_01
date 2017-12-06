@@ -52,6 +52,7 @@ public class YoRPG
   {
     String s;
     String name = "";
+    int role = 0;
     s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
     s += "\nChoose your difficulty: \n";
@@ -72,8 +73,28 @@ public class YoRPG
 	    name = in.readLine();
     } catch ( IOException e ) { }
 
+    s = "Choose your role:\n1. Assassin\n2.Knight\n3.Mage\n> ";
+    System.out.print(s);
+
+    try {
+      role = Integer.parseInt( in.readLine() );
+    }
+    catch ( IOException e ) { }
+
     //instantiate the player's character
-    pat = new Protagonist( name );
+    if (role == 1){
+      pat = new Assassin( name );
+      System.out.println( "Role: Assassin " + pat );
+    }
+    else if (role == 2){
+      pat = new Knight( name );
+      System.out.println("Role: Knight " + pat );
+    }
+    else{
+      pat = new Mage( name );
+      System.out.println( "Role: Mage " + pat );
+    }
+
 
   }//end newGame()
 
