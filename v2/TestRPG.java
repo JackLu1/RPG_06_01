@@ -13,6 +13,15 @@ public class TestRPG{
 		Mage joe = new Mage("mage joe");
 		System.out.println(joe);
 
+		Dragon tim = new Dragon();
+		System.out.println("Dragon " + tim);
+
+		Orc james = new Orc();
+		System.out.println("Orc " + james);
+
+		Ghoul thomas = new Ghoul();
+		System.out.println("Ghoul " + thomas);
+
 		// Monster mon = new Monster();
 		// System.out.println(mon);
 
