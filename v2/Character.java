@@ -17,9 +17,11 @@ public class Character {
 	health -= damage;
     }
 
-     public int attack (Character target) {
+    public int attack (Character target) {
 	int damage = (int) (strength * attack - target.getDefense() );
 	target.lowerHP(damage);
     return damage;
     }
+
+    
 }
