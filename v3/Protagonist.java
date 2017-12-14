@@ -1,4 +1,4 @@
-public class Protagonist extends Character {
+public abstract class Protagonist extends Character {
     
     protected String name;
     
@@ -10,25 +10,19 @@ public class Protagonist extends Character {
 		attack = 0.4;
     }
 
-    public String getName() {
+    public abstract String toString();	//Prints out Protagonist stats
+	public abstract void specialize();	//Modify attack and defense stats
+    public abstract void normalize();	//Restores attack and defense stats (based on subclass)
+
+    public String getName(){
 		return name;
     }
 
-    public void specialize () {
-		int boost =  1 + (int) (Math.random() * defense);
-		defense -= boost;
-		attack += boost;
-    }
+    
 
-    public void normalize () {
-		defense = 40;
-		attack = 0.4;
-    }
-
-    public String toString(){
-        return "Name: " + name + " hp=" + health + " strength=" + strength + " def=" + defense + " atk=" + attack + System.lineSeparator();
-    }
+    //Compilation error: Protagonist is not abstract and does not override abstract method toString() in Protagonist
+    //Compilation error: abstract methods cannot have a body
 }
-	   
+//Upon instantialization: Protagonist is abstract; cannot be instantiated	   
 
     

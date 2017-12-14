@@ -9,6 +9,22 @@ public class Assassin extends Protagonist{
 	}
 
 	public String toString(){
-        return "Assassin: " + name + " hp=" + health + " strength=" + strength + " def=" + defense + " atk=" + attack + System.lineSeparator();
+        return "Class: Assassin " 
+        		+ System.lineSeparator() + "Name = " + name 
+        		+ System.lineSeparator() + "Health = " + health 
+        		+ System.lineSeparator() + "Strength = " + strength
+        		+ System.lineSeparator() + "Defense = " + defense
+        		+ System.lineSeparator() + "Attack = " + attack + System.lineSeparator();
+    }
+
+    public abstract void specialize () {
+		int boost =  1 + (int) (Math.random() * defense);
+		defense -= boost;
+		attack += boost;
+    }
+
+    public abstract void normalize () {
+		defense = 30;
+		attack = 0.8;
     }
 }
